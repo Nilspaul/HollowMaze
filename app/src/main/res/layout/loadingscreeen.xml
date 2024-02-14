@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/tiles_background" />
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="267dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="56dp"
+        android:gravity="center"
+        android:text="Hier werden tips stehen"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="400dp"
+        android:layout_height="268dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include3"
+        app:layout_constraintVertical_bias="0.551"
+        app:srcCompat="@drawable/white_bat" />
+</androidx.constraintlayout.widget.ConstraintLayout>

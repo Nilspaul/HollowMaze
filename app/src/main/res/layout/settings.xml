@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/tiles_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/resetGameButton2"
+        android:layout_width="189dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="448dp"
+        android:backgroundTint="@color/white"
+        android:onClick="resetState"
+        android:text="Reset game"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include"
+        app:layout_constraintVertical_bias="0.273" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <ImageButton
+        android:id="@+id/goBackSettings"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="settings"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:onClick="goToMainMenu"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrowback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/lowerDifficulty"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="last difficulty"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:onClick="setLastDifficulty"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <ImageButton
+        android:id="@+id/higherDifficulty"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="next difficulty"
+        android:drawableStart="@drawable/arrow_right"
+        android:onClick="setNextDifficulty"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toEndOf="@+id/difficulty"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Switch
+        android:id="@+id/vibration"
+        android:layout_width="175dp"
+        android:layout_height="21dp"
+        android:onClick="setVibrationStatus"
+        android:text="Vibration"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/difficulty"
+        android:layout_width="115dp"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:text="Easy"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.359"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

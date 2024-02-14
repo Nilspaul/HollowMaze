@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/tiles_background" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center_horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="70dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="70dp"
+        app:layout_constraintTop_toTopOf="@+id/include4"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Level Selection"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recyclerView"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/goBack"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="16dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Go to menu"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:onClick="goToMainMenu"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrowback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
